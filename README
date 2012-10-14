@@ -1,0 +1,15 @@
+Executes command for up to "time" seconds.
+
+If program works more that "time" seconds, timeout kill()'s it.
+After kill(), optionally second command is started.
+
+Example usage:
+
+Executes ls -al for up to 20 sec.
+./timeout 20 'ls -al'
+
+Executes top for 10 seconds:
+./timeout 10 top
+
+Executes top for 10 seconds, then executes ls -al:
+./timeout 10 top 'ls -al'
